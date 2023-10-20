@@ -1,0 +1,52 @@
+@use "../../styles/global/" as g;
+
+.sidebar {
+    &--menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2.5rem;
+        width: 100%;
+        @include g.for-tablet-portrait-up {
+            width: 20rem;
+        }
+    }
+
+    &--user {
+        padding-block-start: 4rem;
+        & svg {
+            font-size: 3rem;
+            border: 0.0625rem solid;
+            padding: 0.6rem;
+            border-radius: 6.25rem;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    & nav {
+        & ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        & a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1.5rem;
+        }
+
+        & svg {
+            font-size: 1.3rem;
+        }
+    }
+}
