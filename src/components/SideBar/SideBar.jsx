@@ -16,7 +16,7 @@ export const SideBar = () => {
             <div className="sidebar--menu  min-h-full bg-base-200 text-base-content">
                 {/* Sidebar content here */}
                 <div className="sidebar--user">
-                    <span>
+                    <span className="avatar online"> 
                         <FaUserAlt />
                     </span>
                     {/* <Link to='/'>Log In</Link> */}

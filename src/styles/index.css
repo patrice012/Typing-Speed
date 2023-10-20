@@ -1,3 +1,12 @@
+:root {
+  --border-color:#9c9c9c63;
+}
+
+.btn {
+  text-transform: capitalize !important;
+  font-size: 0.9rem !important;
+}
+
 .sidebar--menu {
   display: flex;
   flex-direction: column;
@@ -44,29 +53,63 @@
 
 .mainContent {
   width: 100%;
-  height: 100%;
+  height: 90%;
   padding: 5rem 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
-.mainContent--car {
-  background-color: white;
-  box-shadow: 0px 0px 1px 0px rgba(156, 156, 156, 0.3882352941);
-  border: 0.125rem solid rgba(156, 156, 156, 0.3882352941);
+.mainContent--car, .mainContent--text, .mainContent--input {
+  box-shadow: 0px 0px 1px 0px var(--border-color);
+  border: 0.125rem solid var(--border-color);
   border-radius: 0.625rem;
   width: 100%;
+}
+.mainContent--car {
   height: 10rem;
 }
 .mainContent--car--preview {
   height: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1.3rem 1.5rem;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   justify-content: flex-start;
   align-items: flex-end;
 }
 .mainContent--car--preview svg {
-  font-size: 1.9rem;
+  font-size: 2.5rem;
+}
+.mainContent--car .car--preview--user, .mainContent--car .car--preview--bot {
+  border-bottom: 3px dashed var(--border-color);
+  position: relative;
+  height: 3rem;
+  border-right: 3px solid var(--border-color);
+}
+.mainContent--car .car--preview--user::after, .mainContent--car .car--preview--bot::after {
+  position: absolute;
+  bottom: 26px;
+  right: -3px;
+  content: "Finish";
+  font-size: 0.65rem;
+  padding: 0.1rem 0.35rem;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  background-color: var(--border-color);
+}
+.mainContent--car .car--preview--user svg {
+  transform: translateY(0.625rem);
+}
+.mainContent--car .car--preview--bot svg {
+  transform: translateY(0.75rem);
+}
+.mainContent--text .text-container {
+  padding: 1.3rem 1.5rem;
+}
+.mainContent--text .text-container .text {
+  line-height: 1.75;
+}
+.mainContent--input input {
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */

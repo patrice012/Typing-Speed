@@ -31,9 +31,14 @@ export const MainContent = () => {
                 <input
                     type="text"
                     placeholder="Type here"
-                    className="input input-bordered w-full max-w-xs"
+                    className="input input-bordered "
                 />
             </section>
+            <div>
+                <button className="btn">
+                    Leave the Race
+                </button>
+            </div>
         </section>
     );
 };
