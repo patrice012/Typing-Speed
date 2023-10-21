@@ -7,6 +7,17 @@
   font-size: 0.9rem !important;
 }
 
+.drawer-button {
+  cursor: pointer;
+  border: 0.0625rem solid;
+  border-radius: 0.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.drawer-button svg {
+  font-size: 2rem;
+}
+
 .sidebar--menu {
   display: flex;
   flex-direction: column;
@@ -51,17 +62,32 @@
   font-size: 1.3rem;
 }
 
+.main {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100rem;
+  margin-inline: auto;
+}
+
 .mainContent {
   width: 100%;
-  height: 90%;
-  padding: 5rem 5rem;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0rem clamp(1rem, 0.5rem + 3vw, 5rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 3.5rem;
   align-items: center;
 }
+.mainContent--container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: flex-start;
+}
 .mainContent--car, .mainContent--text, .mainContent--input {
-  box-shadow: 0px 0px 1px 0px var(--border-color);
+  box-shadow: 0px 0px 0.0625rem 0px var(--border-color);
   border: 0.125rem solid var(--border-color);
   border-radius: 0.625rem;
   width: 100%;
@@ -82,20 +108,20 @@
   font-size: 2.5rem;
 }
 .mainContent--car .car--preview--user, .mainContent--car .car--preview--bot {
-  border-bottom: 3px dashed var(--border-color);
+  border-bottom: 0.1875rem dashed var(--border-color);
   position: relative;
   height: 3rem;
   border-right: 3px solid var(--border-color);
 }
 .mainContent--car .car--preview--user::after, .mainContent--car .car--preview--bot::after {
   position: absolute;
-  bottom: 26px;
-  right: -3px;
+  bottom: 1.625rem;
+  right: -0.1875rem;
   content: "Finish";
   font-size: 0.65rem;
   padding: 0.1rem 0.35rem;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-top-left-radius: 0.125rem;
+  border-bottom-left-radius: 0.125rem;
   background-color: var(--border-color);
 }
 .mainContent--car .car--preview--user svg {
@@ -112,4 +138,40 @@
 }
 .mainContent--input input {
   width: 100%;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem clamp(1rem, 0.5rem + 3vw, 5rem);
+}
+.topBar .countdown {
+  font-size: 1.4rem;
+}
+.topBar .countdown > span {
+  margin-inline-end: 0.2rem;
+}
+.topBar .countdown--container {
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid;
+  border-radius: 2px;
+}
+@media (min-width: 900px) {
+  .topBar .countdown--container {
+    justify-self: flex-end;
+  }
+}
+.topBar .changeTheme {
+  grid-column: 3/4;
+}
+.topBar .changeTheme label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
 }/*# sourceMappingURL=index.css.map */

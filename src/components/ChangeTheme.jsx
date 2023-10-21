@@ -1,9 +1,16 @@
+import { useState } from "react";
+
 export const ChangeTheme = () => {
+    const[checked, setChecked] = useState(true)
+    const toogleTheme = () => {
+        setChecked(prev => !prev)
+        document.documentElement.classList.add("dark");
+    }
     return (
-        <div className="form-control">
-            <label className="label cursor-pointer">
-                <span className="label-text">Remember me</span>
-                <input type="checkbox" className="toggle" checked />
+        <div className="changeTheme">
+            <label className="">
+                <span className="label-text">Dark</span>
+                <input onChange={toogleTheme} type="checkbox" className="toggle" checked={checked} />
             </label>
         </div>
     );

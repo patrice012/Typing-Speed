@@ -1,0 +1,40 @@
+@use '../../styles/global/' as g;
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem clamp(1rem, 0.5rem + 3vw, 5rem);
+
+    .countdown {
+        font-size: 1.4rem;
+        
+
+        & > span {
+            margin-inline-end: .2rem;
+        }
+        &--container {
+            grid-column: 2 / 3;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            padding: .2rem .5rem;
+            border: 1px solid;
+            border-radius: 2px;
+            @include g.for-tablet-portrait-landscape-up{
+                justify-self: flex-end;
+            }
+        }
+    }
+
+
+    & .changeTheme {
+        grid-column: 3 / 4;
+        & label {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: .8rem;
+        }
+    }
+}

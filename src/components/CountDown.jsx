@@ -1,30 +1,24 @@
 export const CountDown = () => {
     return (
-        <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">
-                    <span style={{ "--value": 15 }}></span>
+        <div className="countdown--container">
+            {/* <div>
+                <span className="countdown font-mono text-4xl">
+                    <span style={{ "--value": 12 }}></span>
                 </span>
-                days
+                Hours
             </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">
-                    <span style={{ "--value": 10 }}></span>
+            <div>
+                <span className="countdown font-mono text-4xl">
+                    <span style={{ "--value": 44 }}></span>
                 </span>
-                hours
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">
-                    <span style={{ "--value": 24 }}></span>
-                </span>
-                min
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                <span className="countdown font-mono text-5xl">
-                    <span style={{ "--value": 16 }}></span>
+                Minutes
+            </div> */}
+            <div>
+                <span className="countdown text-3xl">
+                    <span style={{ "--value": 17 }}></span>
                 </span>
                 sec
             </div>
         </div>
     );
-}
+};

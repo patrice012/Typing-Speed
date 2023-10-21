@@ -1,5 +1,17 @@
+@use 'variables' as v;
+
+
 .btn {
     text-transform: capitalize !important;
-    font-size: .9rem !important;
+    font-size: 0.9rem !important;
+}
 
+.drawer-button {
+    cursor: pointer;
+    border: v.$border-width solid;
+    border-radius: v.$radius;
+    width: fit-content;
+    & svg {
+        font-size: 2rem;
+    }
 }

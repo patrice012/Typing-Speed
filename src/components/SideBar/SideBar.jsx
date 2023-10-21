@@ -1,8 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
-import { BsKeyboardFill } from 'react-icons/bs';
+import { BsKeyboardFill } from "react-icons/bs";
 import { MdOutlineScore, MdSpeed } from "react-icons/md";
-import { BiHelpCircle } from 'react-icons/bi';
+import { BiHelpCircle } from "react-icons/bi";
 
 export const SideBar = () => {
     return (
@@ -16,7 +16,7 @@ export const SideBar = () => {
             <div className="sidebar--menu  min-h-full bg-base-200 text-base-content">
                 {/* Sidebar content here */}
                 <div className="sidebar--user">
-                    <span className="avatar online"> 
+                    <span className="avatar online">
                         <FaUserAlt />
                     </span>
                     {/* <Link to='/'>Log In</Link> */}
